@@ -1,7 +1,11 @@
 ﻿requests
 gunicorn
 Flask
-Flask-SQLAlchemy
+flask_sqlalchemy
 SQLAlchemy
 Werkzeug
 flask_bootstrap
+flask_wtf
+wtforms
+flask_login
+wtforms.validators
