@@ -9,15 +9,15 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gnrnzkxamyjcti:1dd29d84635ca4cbad27d7102063aa733e6e6b338cfc495a2d1339d15c2251d0@ec2-34-247-118-233.eu-west-1.compute.amazonaws.com:5432/d6vlbg2trp9kkf'
-#ENV = 'dev'
-#
-#if ENV == 'dev':
-#    app.debug = True
-#    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://gnrnzkxamyjcti:1dd29d84635ca4cbad27d7102063aa733e6e6b338cfc495a2d1339d15c2251d0@ec2-34-247-118-233.eu-west-1.compute.amazonaws.com:5432/d6vlbg2trp9kkf'
-#else:
-#    app.debug = False
-#    app.config['SQLALCHEMY_DATABASE_URI'] = ''
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gnrnzkxamyjcti:1dd29d84635ca4cbad27d7102063aa733e6e6b338cfc495a2d1339d15c2251d0@ec2-34-247-118-233.eu-west-1.compute.amazonaws.com:5432/d6vlbg2trp9kkf'
+ENV = 'dev'
+
+if ENV == 'dev':
+    app.debug = True
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gnrnzkxamyjcti:1dd29d84635ca4cbad27d7102063aa733e6e6b338cfc495a2d1339d15c2251d0@ec2-34-247-118-233.eu-west-1.compute.amazonaws.com:5432/d6vlbg2trp9kkf'
+else:
+    app.debug = False
+    app.config['SQLALCHEMY_DATABASE_URI'] = ''
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
